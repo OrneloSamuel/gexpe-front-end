@@ -1,7 +1,11 @@
 {
-  "name": "animalec",
+  "name": "gexpe",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.20.2",
+    "npm": "8.19.4"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
