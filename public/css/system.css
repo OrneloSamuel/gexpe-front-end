@@ -1,0 +1,78 @@
+
+.image-box {
+    /*display: flex;
+    height: 170px;
+    */
+    position: relative;
+    width: 100%;
+}
+
+
+.image-box .avatar,
+.image-box .profile-picture {
+    box-sizing: border-box;
+    border: 4px solid silver;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-box .avatar::after {
+    opacity: 0;
+    font-family: FontAwesome;
+    content: "\f040";
+    color: #fff;
+    font-size: 2.5rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 350ms ease-in-out;
+    width: 169px;
+    height: 159px;
+    border-radius: 50%;
+}
+
+.image-box .avatar:hover::after {
+    opacity: 1;
+}
+
+.image-box .avatar img,
+.image-box .profile-picture img {
+    width: 169px;
+    height: 169px;
+}
+
+.image-box .btn-box {
+    position: absolute;
+    opacity: 0;
+    width: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    top: 60%;
+    left: 10%;
+    z-index: -1;
+    transition: 350ms ease-in-out;
+}
+
+.image-box .btn-box label {
+    cursor: pointer;
+}
+
+.image-box input {
+    display: none;
+}
+
+.image-box input:checked+div.btn-box {
+    opacity: 1;
+    z-index: 999;
+}
+
+body {
+    background-color: black;
+}

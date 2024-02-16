@@ -1,0 +1,82 @@
+/* Alpine JS initial hidden elements */
+[x-cloak] { display: none !important; }
+
+
+/* Custom fonts */
+@font-face {
+    font-family: "Nunito Regular";
+    src: url("../font/Nunito-Regular.ttf");
+}
+@font-face {
+    font-family: "Nunito ExtraBold";
+    src: url("../font/Nunito-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "Nunito ExtraBold Italic";
+    src: url("../font/Nunito-ExtraBoldItalic.ttf");
+}
+
+
+/* Custom css variables */
+:root {
+
+    /* Layout variables */
+    --navbar-height: 55.05px;
+    --main-height: calc(100vh - var(--navbar-height));
+
+}
+
+
+/* Default font family */
+body {
+    font-family: "Nunito Regular" !important;
+}
+
+/* Top navbar static height */
+.navbar {
+    height: var(--navbar-height);
+}
+
+
+/* Collapse sidebar ideal width */
+.collapse-sidebar {
+    width: 236px;
+}
+
+
+/*
+    Main content wrapper (Except topnav)
+    define static height
+*/
+.main {
+    height: var(--main-height);
+}
+
+
+/* Logo size */
+.logo {
+    height: 96px;
+    width: 96px;
+}
+
+
+/*
+    Fade effect
+    for nav-links inside sidebar, and
+    accordion-header button child
+*/
+.active,
+.nav-link:hover,
+.accordion-header:hover .accordion-button {
+    background-color: #f2f0eb !important;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .table {
+        table-layout: fixed;
+        min-width: 512px;
+    }
+
+}
